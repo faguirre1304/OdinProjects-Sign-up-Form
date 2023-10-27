@@ -1,0 +1,300 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@font-face {
+  font-family: odinFont;
+  src: url(media/Norse-Bold.otf);
+}
+
+:root {
+  --titulos: "Inter", sans-serif;
+  --textos: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container__form {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.flex__box {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.picture {
+  height: 100vh;
+  min-width: 600px;
+  background-image: url(media/background.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.box__logo {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.488);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.box__logo p {
+  font-family: odinFont;
+  font-size: 2.5rem;
+  color: #f2f2f2;
+}
+
+.box__logo img {
+  width: 100px;
+}
+
+.right__div {
+  height: 50vh;
+  display: flex;
+  gap: 3rem;
+  padding: 1.5rem;
+  flex-direction: column;
+}
+
+.right__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.intro,
+.motivation__text {
+  font-family: var(--textos);
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-wrap: stable;
+  color: #f2f2f2;
+}
+
+.right__texts .title {
+  font-family: var(--titulos);
+  font-size: 1.8rem;
+  color: #f2f2f2;
+}
+
+form {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 4rem;
+}
+
+.Left__form,
+.right__form {
+  width: 45%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.5rem;
+}
+
+.Left__form button {
+  margin-top: 2.5rem;
+  font-family: var(--titulos);
+  font-size: 1.3rem;
+  background-color: rgba(172, 255, 47, 0.524);
+  color: #f2f2f2;
+  padding: 1rem 0.5rem;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Left__form button:hover {
+  background-color: rgba(186, 234, 115);
+  color: black;
+}
+
+.input__left,
+.input__right {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.input__left,
+.input__right label {
+  font-family: var(--textos);
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #f2f2f2;
+}
+.input__left input,
+.input__right input {
+  width: 100%;
+  outline: 0;
+  background-color: transparent;
+  padding: 0.2rem;
+  font-size: 1.1rem;
+  font-family: var(--textos);
+  font-weight: 300;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid #f2f2f2;
+  color: #f2f2f2;
+}
+.input__left input:focus,
+.input__right input:focus {
+  border-color: rgba(172, 255, 47, 0.524);
+}
+
+.right__div .finish {
+  color: #f2f2f2;
+  font-family: var(--textos);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.right__div .log__in {
+  color: rgba(172, 255, 47);
+  margin-left: 0.3rem;
+  cursor: pointer;
+}
